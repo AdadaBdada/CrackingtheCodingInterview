@@ -6,6 +6,9 @@ class ListNode(object):
 
 
 def remove_dups(head):
+    '''
+    O(N) time, which N is the number of elements in the linked list
+    '''
 
     if head == None:
         return
@@ -29,6 +32,8 @@ def remove_dups_followup(head):
     '''
     current pointer: iterates through the linked list
     runner  pointer: checks all subsequent nodes for duplicates
+
+    O(1) space, but O(sqrt(N))
     '''
 
     if head == None:
