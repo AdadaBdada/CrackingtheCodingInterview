@@ -67,24 +67,67 @@ def sumLists_2(l1, l2):
     return res_head.next
 
 
-if __name__ == "__main__":
-    a = ListNode(2)
-    b = ListNode(4)
-    c = ListNode(3)
+def sum_lists_followup(l1, l2):
 
-    d = ListNode(5)
-    e = ListNode(6)
-    f = ListNode(4)
+    l1_ = ''
+    l2_ = ''
+
+    while l1:
+        l1_ += str(l1.val)
+        l1 = l1.next
+    while l2:
+        l2_ += str(l2.val)
+        l2 = l2.next
+
+    res_ = int(l1_) + int(l2_)
+
+    res = res_head = ListNode(0)
+    for i in str(res_):
+        res.next = ListNode(int(i))
+        res = res.next
+
+    res.next = None
+
+    return res_head.next
+
+
+if __name__ == "__main__":
+    # a = ListNode(2)
+    # b = ListNode(4)
+    # c = ListNode(3)
+    #
+    # d = ListNode(5)
+    # e = ListNode(6)
+    # f = ListNode(4)
+    #
+    # a.next = b
+    # b.next = c
+    #
+    # d.next = e
+    # e.next = f
+    #
+    # z = ListNode(5)
+    # k = ListNode(5)
+    #
+    # res = sumLists_2(z, k)
+    # print(res.val)
+    # print(res.next.val)
+
+    a = ListNode(6)
+    b = ListNode(1)
+    c = ListNode(7)
 
     a.next = b
     b.next = c
 
+    d = ListNode(2)
+    e = ListNode(9)
+    f = ListNode(5)
+
     d.next = e
     e.next = f
 
-    z = ListNode(5)
-    k = ListNode(5)
-
-    res = sumLists_2(z, k)
-    print(res.val)
-    print(res.next.val)
+    res = sum_lists_followup(a, d)
+    while res:
+        print(res.val)
+        res = res.next
