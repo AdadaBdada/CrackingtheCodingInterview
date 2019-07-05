@@ -6,6 +6,9 @@ class ListNode(object):
 
 
 def kth_to_last(head, k):
+    '''
+    take O(n) time and O(1) space
+    '''
 
     right = head
     left = head
