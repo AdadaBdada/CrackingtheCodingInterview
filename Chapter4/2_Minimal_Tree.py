@@ -26,5 +26,5 @@ def sortedArrayToBST(nums):
 
 
 if __name__ == "__main__":
-    nums = [-10, -3, 0, 5, 9]
-    sortedArrayToBST(nums)
+    nums = [-10, -3, -1, 0, 1, 5, 9]
+    root = sortedArrayToBST(nums)
