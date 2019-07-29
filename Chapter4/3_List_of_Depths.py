@@ -1,6 +1,5 @@
 # 102. Binary Tree Level Order Traversal
 
-
 from collections import deque
 
 
@@ -42,7 +41,6 @@ def levelOrder(root):
 
 
 # Approach 2: Iteration
-
 
 def levelOrder_2(root):
     '''
